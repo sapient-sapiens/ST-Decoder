@@ -10,8 +10,8 @@ LOG_FILE="${LOG_DIR}/latency_suite_$(date +%Y%m%d_%H%M%S).log"
 
 echo "Running latency benchmarks and plots..." | tee -a "$LOG_FILE"
 
-stdbuf -oL -eL python3 -u -m st_decoder.benchmarks.fc_st_rounds 2>&1 | tee -a "$LOG_FILE"
-stdbuf -oL -eL python3 -u -m st_decoder.benchmarks.latency 2>&1 | tee -a "$LOG_FILE"
+stdbuf -oL -eL python3 -u -m latency.fc_vs_st_rounds 2>&1 | tee -a "$LOG_FILE"
+stdbuf -oL -eL python3 -u -m latency.decode_latency 2>&1 | tee -a "$LOG_FILE"
 stdbuf -oL -eL python3 -u analysis/plot_fc_st_rounds.py 2>&1 | tee -a "$LOG_FILE"
 stdbuf -oL -eL python3 -u analysis/plot_latency.py 2>&1 | tee -a "$LOG_FILE"
 
