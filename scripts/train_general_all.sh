@@ -31,7 +31,7 @@ for model in spatiotemporal_local vanilla gnn 3d_cnn; do
   echo "  log=${log_file}"
   echo "============================================================"
 
-  stdbuf -oL -eL python3 -u -m st_decoder.cli.general \
+  stdbuf -oL -eL python3 -u -m train_utils.cli.general \
     --model-type "$model" \
     --epochs "$EPOCHS" \
     --train-size-total "$TRAIN_SIZE_TOTAL" \

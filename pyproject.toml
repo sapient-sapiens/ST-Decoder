@@ -30,4 +30,4 @@ dependencies = [
 Repository = "https://github.com/sapient-sapiens/ST-Decoder"
 
 [tool.setuptools.packages.find]
-include = ["src*", "st_decoder*", "analysis*", "latency*"]
+include = ["src*", "train_utils*", "analysis*", "latency*"]

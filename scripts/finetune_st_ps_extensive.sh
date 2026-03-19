@@ -66,7 +66,7 @@ for pair in "3:7" "5:5" "7:3"; do
     p="$(printf '0.%03d' "$i")"
     log="${LOG_DIR}/finetune_st_ext_d${d}_r${r}_p${p}.log"
 
-    stdbuf -oL -eL python3 -u -m st_decoder.cli.finetune \
+    stdbuf -oL -eL python3 -u -m train_utils.cli.finetune \
       --model-type spatiotemporal_local \
       --d "$d" --r "$r" --p "$p" \
       --epochs "$epochs" --train-size "$TRAIN_SIZE" --batch-size "$BATCH_SIZE" --lr "$LR" \

@@ -17,7 +17,7 @@ echo "Mask ablation: spatiotemporal_local vs spatiotemporal_full (d=5, r in 3,5,
 for r in 3 5 7; do
   for mt in spatiotemporal_local spatiotemporal_full; do
     echo "=== finetune model_type=${mt} d=5 r=${r} ===" | tee -a "$LOG_FILE"
-    stdbuf -oL -eL python3 -u -m st_decoder.cli.finetune \
+    stdbuf -oL -eL python3 -u -m train_utils.cli.finetune \
       --d 5 --r "$r" --p 0.005 \
       --epochs 30 \
       --train-size 1000000 \

@@ -82,7 +82,7 @@ run_finetune() {
   local log="${LOG_DIR}/finetune_all_${model_type}_${noise_model}_d${D}_r${R}_p${P}_$(date +%Y%m%d_%H%M%S).log"
   echo "Model=${model_type} Noise=${noise_model} Epochs=${epochs} Init=${init_ckpt}"
 
-  stdbuf -oL -eL python3 -u -m st_decoder.cli.finetune \
+  stdbuf -oL -eL python3 -u -m train_utils.cli.finetune \
     --model-type "$model_type" \
     --d "$D" --r "$R" --p "$P" \
     --epochs "$epochs" --train-size "$TRAIN_SIZE" --batch-size "$BATCH_SIZE" \
