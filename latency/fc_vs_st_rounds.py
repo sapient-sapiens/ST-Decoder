@@ -8,7 +8,7 @@ import os
 import statistics
 
 from .decode_latency import time_ml_model
-from st_decoder.paths import REPO_ROOT
+from train_utils.config import REPO_ROOT
 
 OUTPUT = "data/fc_vs_st_rounds_d11.csv"
 

@@ -13,7 +13,7 @@ from typing import List, Optional
 import pymatching
 import stim
 import torch
-from st_decoder.config import (
+from train_utils.config import (
     DROPOUT,
     ST_LOCAL_D_MODEL,
     ST_LOCAL_FFN_DIM,
@@ -27,7 +27,7 @@ from st_decoder.config import (
     VANILLA_N_HEAD,
     VANILLA_N_LAYERS,
 )
-from st_decoder.paths import REPO_ROOT
+from train_utils.config import REPO_ROOT
 from src.circuit import get_data_surface, get_circuit_surface, pad_surface
 from src.transformer_models import SpatioTemporalLocalTransformer, VanillaTransformer
 
