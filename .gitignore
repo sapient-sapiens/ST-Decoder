@@ -1,0 +1,32 @@
+# Checkpoints and model weights
+*.pt
+data/checkpoints/
+data/logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.cursor/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Junk archive
+junk/
+
+# Generated outputs (regenerable from scripts)
+analysis/out/*.png
+analysis/out/*.tex
